@@ -1,0 +1,23 @@
+# Privileges for `artistic_admin`@`localhost`
+
+GRANT ALL PRIVILEGES ON *.* TO `artistic_admin`@`localhost` IDENTIFIED BY PASSWORD '*0FC95BA076DE8BCF87BEA062677BDDB83C396066' WITH GRANT OPTION;
+
+
+# Privileges for `root`@`127.0.0.1`
+
+GRANT ALL PRIVILEGES ON *.* TO `root`@`127.0.0.1` WITH GRANT OPTION;
+
+
+# Privileges for `root`@`::1`
+
+GRANT ALL PRIVILEGES ON *.* TO `root`@`::1` WITH GRANT OPTION;
+
+
+# Privileges for `root`@`localhost`
+
+GRANT ALL PRIVILEGES ON *.* TO `root`@`localhost` WITH GRANT OPTION;
+
+GRANT PROXY ON ''@'%' TO 'root'@'localhost' WITH GRANT OPTION;
+
+
+

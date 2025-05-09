@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-K5a5f5FYY7KwEVN52spBk4FcXBL5NpUed4lvEcDYacA2Y6KXMKYOv3S4K5rQ3WzZ+0d0BzJ8UBbmHl8wGhfHow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN - Keep this one -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vHkT2D2xM2UKk4Nx+VuF9S7rcHcoyIb0T0bIdPv4q0Dp9U3cSLF+VZCk3khBhlG+ShWHPF0IbGvjcLZME98Feg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css copy\normalize.css">
+    <link rel="stylesheet" href="css copy\swiper-bundle.min.css">
+    <link rel="stylesheet" href="css copy\vendor.css">
+
+    <link rel="stylesheet" href="style2.css">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        
+
+/*** Testimonial ***/
+:root { 
+    --primary-light: #a4e0dd;
+    --primary: #78cac5;
+    --primary-dark: #4db8b2;
+    --secondary-light: #f2e6b5;
+    --secondary: #e7cf9b;
+    --secondary-dark: #96833f;
+    --light: #EEF9FF;
+    --dark: #173836;
+}
+
+.section-title h1{
+    color: var(--primary-dark) !important;
+}
+.section-title h5{
+    color: var(--secondary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item h4 {
+    color: var(--primary-dark) !important;
+}
+.bg-light {
+    background-color:var(--secondary-light) !important;
+}
+.testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.owl-carousel h4{
+    color: var(--dark) !important;
+}
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: #DDDDDD;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item.center {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-item .testimonial-item {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: #FFFFFF !important;
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+
+    </style>
+</head>
+<body>
+    
+   
+    <!-- Featured Artists Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Featured Artists</h5>
+                <h1 class="mb-0">Top Artists of the Month</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <!-- Week 1 Winner -->
+                <div class="testimonial-item bg-light my-4" style="height: 300px;">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px; object-fit: cover;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Sarah Al-Mansour</h4>
+                            <small class="text-uppercase">Week 1 Winner</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Sarah’s blend of traditional and digital mediums captivated our community, with her bold colors and storytelling earning her the spotlight!                    </div>
+                </div>
+                <!-- Week 2 Winner -->
+                <div class="testimonial-item bg-light my-4" style="height: 300px;">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px; object-fit: cover;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Omar Khalid</h4>
+                            <small class="text-uppercase">Week 2 Winner</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        With a unique approach to surrealism, Omar’s dreamy compositions stood out in week 2. His piece “Whispers of the Desert” gained massive appreciation.
+                    </div>
+                </div>
+                <!-- Week 3 Winner -->
+                <div class="testimonial-item bg-light my-4" style="height: 300px;">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px; object-fit: cover;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Lina Harb</h4>
+                            <small class="text-uppercase">Week 3 Winner</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Lina’s abstract series on human emotions captivated audiences in week 3. Her minimalist style and color theory mastery impressed the jury and followers alike.
+                    </div>
+                </div>
+                <!-- Week 4 Winner -->
+                <div class="testimonial-item bg-light my-4" style="height: 300px;">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded-circle" src="img/testimonial-4.jpg" style="width: 60px; height: 60px; object-fit: cover;">
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Tariq Nassar</h4>
+                            <small class="text-uppercase">Week 4 Winner</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Combining street art and calligraphy, Tariq’s artwork turned heads in the final week. His piece “Voices of the City” went viral among fellow creatives.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured Artists End -->
+     
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+  
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

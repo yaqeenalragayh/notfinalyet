@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Artwork Commission | Artisan's Canvas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formcustomization.css">
+</head>
+<body>
+    <div class="canvas-texture"></div>
+    <div class="paint-splatter splatter-1"></div>
+    <div class="paint-splatter splatter-2"></div>
+    <div class="brush-stroke stroke-1"></div>
+    <div class="brush-stroke stroke-2"></div>
+
+    <div class="container">
+        <div class="art-form-container">
+            <div class="form-header">
+                <div class="logo-container">
+                    <div class="logo-placeholder"><img src="img\Logo.svg"/></div>
+                </div>
+
+                <div class="welcome-message">
+                    <h1>Create Your Custom Artwork</h1>
+                    <p class="welcome-quote">"Inspired by the original, made uniquely yours"</p>
+                </div>
+            </div>
+
+            <form id="artworkForm" class="form-body">
+                <!-- Original Artwork Reference Section -->
+                <div class="original-artwork-card">
+                    <h3 class="text">Original Artwork:</h3>
+                    <div class="artwork-image-container">
+                        <img src="img\pexels-pixabay-159862.jpg" alt="">
+                    </div>
+                    <div class="artwork-details-grid">
+                        <div class="artwork-detail">
+                            <div class="artwork-detail-label">Dimensions</div>
+                            <div class="artwork-detail-value" id="original-dimensions">24x36 inches</div>
+                        </div>
+                        <div class="artwork-detail">
+                            <div class="artwork-detail-label">Medium</div>
+                            <div class="artwork-detail-value" id="original-medium">Oil on canvas</div>
+                        </div>
+                        <div class="artwork-detail">
+                            <div class="artwork-detail-label">Year</div>
+                            <div class="artwork-detail-value" id="original-year">2024</div>
+                        </div>
+                        <div class="artwork-detail">
+                            <div class="artwork-detail-label">Weight</div>
+                            <div class="artwork-detail-value" id="original-weight">5.2kg</div>
+                        </div>
+                        <div class="artwork-detail">
+                            <div class="artwork-detail-label">Framing</div>
+                            <div class="artwork-detail-value" id="original-framing">Unframed</div>
+                        </div>
+                        <div class="artwork-detail">
+                            <div class="artwork-detail-label">Signature</div>
+                            <div class="artwork-detail-value" id="original-signature">Signed by artist</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customization Section -->
+                <fieldset>
+                    <legend>Your Customization</legend>
+
+                    <div class="mb-4">
+                        <label for="artType" class="form-label">What type of artwork would you like?</label>
+                        <select class="form-select" id="artType" required>
+                            <option value="" disabled selected>Select your preferred medium</option>
+                            <option value="oil" selected>Oil Painting</option>
+                            <option value="acrylic">Acrylic Painting</option>
+                            <option value="watercolor">Watercolor</option>
+                            <option value="digital">Digital Art Print</option>
+                            <option value="sculpture">Sculpture</option>
+                            <option value="mixed">Mixed Media</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="artSize" class="form-label">Dimensions</label>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <input type="number" class="form-control" id="width" placeholder="Width (inches)" min="1" value="24">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="number" class="form-control" id="height" placeholder="Height (inches)" min="1" value="36">
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-select" id="orientation">
+                                    <option>Portrait orientation</option>
+                                    <option selected>Landscape orientation</option>
+                                    <option>Square format</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Color preferences</label>
+                        <div class="color-palette">
+                            <div class="color-option selected" style="background-color: var(--primary);" data-color="var(--primary)"></div>
+                            <div class="color-option" style="background-color: var(--secondary);" data-color="var(--secondary)"></div>
+                            <div class="color-option" style="background-color: var(--dark);" data-color="var(--dark)"></div>
+                            <div class="color-option" style="background-color: #ffffff; border: 1px solid #eee;" data-color="#ffffff"></div>
+                            <div class="color-option" style="background-color: #333333;" data-color="#333333"></div>
+                            <div class="color-option" style="background-color: #a78bfa;" data-color="#a78bfa"></div>
+                            <div class="color-option" style="background-color: #fca5a5;" data-color="#fca5a5"></div>
+                            <div class="color-option" style="background-color: #86efac;" data-color="#86efac"></div>
+                            <div class="color-option" style="background-color: #fcd34d;" data-color="#fcd34d"></div>
+                        </div>
+                        <input type="text" class="form-control" id="colorNotes" placeholder="Any specific color combinations or moods you'd like?">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="artDescription" class="form-label">Tell us about your custom vision</label>
+                        <textarea class="form-control" id="artDescription" rows="5" placeholder="How would you like this artwork customized? What elements should we keep or change? What emotions should it evoke?" required></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="referenceUpload" class="form-label">Reference images</label>
+                        <input type="file" class="form-control" id="referenceUpload" accept="image/*" multiple>
+                        <div class="form-text">Upload any inspiration images, sketches, or photos (max 5 files, 5MB each)</div>
+                    </div>
+                </fieldset>
+
+                <!-- Special Requests Section -->
+                <fieldset>
+                    <legend>Special Requests</legend>
+
+                    <div class="mb-4">
+                        <label for="timeline" class="form-label">When would you like it completed?</label>
+                        <select class="form-select" id="timeline">
+                            <option value="" selected disabled>Select your preferred timeline</option>
+                            <option value="flexible">Flexible (4+ weeks)</option>
+                            <option value="standard">Standard (2-4 weeks)</option>
+                            <option value="rush">Rush order (1-2 weeks, +25% fee)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="budget" class="form-label">Budget range</label>
+                        <select class="form-select" id="budget">
+                            <option value="" selected disabled>Select your budget range</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="1000-2500">$1,000 - $2,500</option>
+                            <option value="2500-5000">$2,500 - $5,000</option>
+                            <option value="5000+">$5,000+ (premium commission)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Special techniques (select all that apply)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="texture" value="texture">
+                            <label class="form-check-label" for="texture">Heavy texture/impasto</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="metallic" value="metallic">
+                            <label class="form-check-label" for="metallic">Metallic accents</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="glow" value="glow">
+                            <label class="form-check-label" for="glow">Glow-in-the-dark elements</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="specialRequests" class="form-label">Anything else we should know?</label>
+                        <textarea class="form-control" id="specialRequests" rows="3" placeholder="Special display requirements, framing preferences, or other notes..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="reset" class="btn btn-secondary">
+                        Start Over
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Submit Custom Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="formcustomization.js"></script>
+</body>
+</html>

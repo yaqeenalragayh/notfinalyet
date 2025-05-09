@@ -1,0 +1,241 @@
+:root {
+    --primary-light: #a4e0dd;
+    --primary: #78cac5;
+    --primary-dark: #4db8b2;
+    --secondary-light: #f2e6b5;
+    --secondary: #e7cf9b;
+    --secondary-dark: #96833f;
+    --light: #EEF9FF;
+    --dark: #173836;
+}
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e7cf9b;
+    margin: 0;
+}
+#bg-video {
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    }
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #6ab8b2;
+    margin-bottom: 20px;
+}
+
+p {
+    color:  #96833f;
+    margin-bottom: 30px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: 1px solid #4db8b2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color:#e7cf9b;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(207, 178, 11, 0.5);
+    transition: left 0.8s ease;
+    z-index: -1;
+  }
+  
+  .btn:hover::before {
+    left: 100%;
+  }
+  
+  .btn-secondary {
+    background-color: #4db8b2 !important;
+    border-color: var(--secondary) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 15px rgba(166, 236, 53, 0.3);
+    width: 100px;
+    height: 40px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-light) !important;
+    color: var(--dark) !important;
+    border-color: var(--secondary-dark) !important;
+    transform: scale(1.05);
+  }
+  .enroll-btn{
+    background: none  !important; 
+    color: var(--dark);
+    border: none;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0 1.25rem;
+    height: calc(3rem + 2px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+
+}
+.enroll-btn-primary {
+    background: var(--primary); 
+    color: white;
+    border: none;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0 1.25rem;
+    height: calc(3rem + 2px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: auto;
+    font-weight: 600;
+}
+
+.enroll-btn-primary:hover {
+    background: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+.enroll-btn-secondry{
+    background: var(--secondary-light); 
+    color: var(--dark);
+    border: none;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0 1rem;
+    height: calc(3rem + 2px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.enroll-btn-secondry:hover {
+    background: var(--secondary);
+    transform: scale(1.02);
+}
+@media (max-width: 768px) {
+    .course-card {
+        margin: 0.5rem;
+    }
+
+    .discount-ribbon {
+        right: -45px;
+        padding: 0.4rem 2rem;
+    }
+}
+.fab{
+    
+    padding-right: 10px;
+}
+.button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    /* padding: 0.9rem 0.9rem; */
+    border-radius: 50px;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    display: inline-block; /* Add for proper anchor tag styling */
+    text-decoration: none; /* Remove underline from anchor */
+    text-align: center;
+    min-width: 200px; /* Prevent width changes */
+    min-height: 50px; /* Prevent height changes */
+}
+
+/* Fix for anchor tag specific issues */
+a.button {
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+.button-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(108, 117, 125, 0.3);
+}
+
+
+/* Fix hover scaling issue */
+.button-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px); /* Replace scale with vertical lift */
+    box-shadow: 0 6px 25px rgba(108, 117, 125, 0.4);
+    color: var(--dark) !important;
+}
